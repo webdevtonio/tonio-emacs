@@ -1,3 +1,4 @@
+
 * Installation guide
 ** Step 1
 *** Install emacs (antegros)
@@ -9,7 +10,7 @@
 =rm -rf ~/.emacs.d=
 ** Step 3
 *** Clone the repo
-=git clone https://github.com/webdevtonio/tonio-emacs= 
+=git clone https://github.com/webdevtonio/tonio-emacs ~/.emacs.d= 
 ** Step 4
 *** Open emacs in terminal first
 =emacs=
@@ -500,7 +501,7 @@ These won't work in the terminal version or the virtual console, obvious reasons
 I use qutebrowser, so that's what I'll set up.
 #+BEGIN_SRC emacs-lisp
   (setq browse-url-browser-function 'browse-url-generic
-        browse-url-generic-program "firefox")
+        browse-url-generic-program "chromium")
 #+END_SRC
 
 * Projectile
@@ -1415,10 +1416,10 @@ What it says on the tin, this changes the =erc= history to include the server I 
 *** Nick highlighting
 You can even highlight nicks to make the buffers a bit more visually pleasing and easier to look at.
 #+BEGIN_SRC emacs-lisp
-(use-package erc-hl-nicks
-  :ensure t
-  :config
-    (erc-update-modules))
+  (use-package erc-hl-nicks
+    :ensure t
+    :config
+      (erc-update-modules))
 #+END_SRC
 
 ** rich presence for discord
