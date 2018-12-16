@@ -1,1 +1,1 @@
-[a relative link] (config.org)
+config.org
